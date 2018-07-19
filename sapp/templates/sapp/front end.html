@@ -1,0 +1,54 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<head>
+<link rel = "stylesheet" type = "text/css" href ="{% static 'sapp/style_front.css' %}"/>
+</head>
+<body>
+<div class="topnav">
+  <a href="/sapp/login">Login </a>
+  <a href="/sapp/register">Register</a>
+  <a href="/sapp/contact">Contact</a>
+  <a href = "/sapp/contribute">Contribute</a>
+  <a href="/sapp/about">About</a>  
+  <a class="active">Home</a>
+</div>
+<marquee>Book handymen and repair professionals at short notice online.</marquee>
+<center>
+<div class = "searchform">
+<form method="get" accept-charset="utf-8" action=" results/" >
+  <div class = "service">
+       <select name="p">
+  <option value="" disabled selected>Services</option>
+  <option value="Mechanic">Mechanic</option>
+  <option value="Driver">Driver</option>
+  <option value="Maid">Maid</option>
+  <option value="Plumber">Plumber</option>
+  <option value="Carpenter">Carpenter</option>
+  <option value="Internet Installer">Internet Installer</option>
+  <option value="Electrician"> Electrician</option>
+</select>
+</div>
+      <div class = "city">
+      <select name="r">
+  <option value="" disabled selected>City</option>
+  <option value="Mumbai">Mumbai</option>
+  <option value="Delhi">Delhi</option>
+  <option value="Raipur">Raipur</option>
+  <option value="Bhopal">Bhopal</option>
+  <option value="Bengaluru">Bengaluru</option>
+  <option value="Jaipur">Jaipur</option>
+  <option value="Allahabad"> Allahabad</option>
+</select>
+</div>
+      <div class= "locality">
+      <input  type="text" name="q" placeholder="Locality">
+      <button type="submit">Search<i class="fa fa-search"></i>
+      </button>
+    </div>
+</form>
+</div>
+</center>
+</body>
+</html>
+

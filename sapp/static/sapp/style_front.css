@@ -1,0 +1,99 @@
+
+.topnav {
+    background-color: darkblue;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: right;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: blue;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: black;
+    color: white;
+}
+
+body{
+	background-image: url("img2.3.jpg");
+	background-repeat: no-repeat;
+    color:black;
+    font-size: 30px;
+    font-family: Arial;
+}
+
+.searchform{
+position:fixed;
+top:360px;
+right:450px;
+color: darkblue;
+}
+
+button{
+  border-radius: 4px;
+  align-self: center;
+  color:lightblue;
+  background-color: darkblue;
+  border:none;
+  height: 28px;
+  position:fixed;
+top:374px;
+right:425px;
+width: 100px;
+}
+  
+input[type=text] {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2px;
+    margin-right: 4px; 
+    background-color: white;
+    color:black;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position:fixed;
+    top:372px;
+    right:521px;
+    height: 28px;
+    width: 270px;
+}
+
+.service select{
+    text-align: center;
+    border-radius: 4px;
+    background-color: white;
+    position:fixed;
+    top:374px;
+    right:903px;
+    height: 28px;
+    width: 130px;
+}
+
+i{
+    color: red;
+}
+
+.city select{
+    text-align: center;
+    border-radius: 4px;
+    background-color: white;
+    position:fixed;
+    top:374px;
+    right:793px;
+    height: 28px;
+    width: 110px;
+}
+
+.locality :: placeholder{
+    font-color:black;
+}

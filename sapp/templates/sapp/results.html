@@ -1,0 +1,44 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'sapp/search.css' %}"/>
+</head>
+<body>
+	<center>
+	<p>You searched for: <strong>  {{type}}s</strong> in <strong>{{locality}} , {{city}}</strong> </p>
+</center>
+{% if service %}
+<p>Found {{ service|length }} service{{ service|pluralize }}.</p>
+    {% for service in service %}
+    <ol>
+    <ul>
+    <li>{{ service.name }}</li>
+    {% if service.rating == 5 %}
+        &#9733&#9733&#9733&#9733&#9733
+    {% endif %}
+    {% if service.rating == 4 %}
+        &#9733&#9733&#9733&#9733&#9734
+    {% endif %}
+    {% if service.rating == 3 %}
+        &#9733&#9733&#9733&#9734&#9734
+    {% endif %}
+    {% if service.rating == 2 %}
+        &#9733&#9733&#9734&#9734&#9734
+    {% endif %}
+    {% if service.rating == 1 %}
+        &#9733&#9734&#9734&#9734&#9734
+    {% endif %}
+    <form action="book/" method = "post">
+        {% csrf_token %}
+        <input type="hidden" name="email" value="{{ service.email_id }}">
+         <input type = "submit" value = "BOOK">
+    </form>
+</ul>
+</ol>
+    {% endfor %}
+{% else %}
+<p>No servicers found in your locality.</p>
+{% endif %}
+</body>
+</html>

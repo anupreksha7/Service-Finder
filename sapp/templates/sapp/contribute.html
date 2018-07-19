@@ -1,0 +1,28 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<head>
+	<link rel = "stylesheet" type="text/css" href="{% static 'sapp/cont.css'%}">
+</head>
+<body>
+	<div class="form">
+<center>
+
+        <br><h2>Be a Service Provider</h2><br>
+
+<form method="post" action="">
+	{% csrf_token %}
+<input type="text" name="name" placeholder="FULL NAME"><br><br>
+<input name="mobile_no" type="text" placeholder="MOBILE NUMBER" ><br><br>
+<input name="service" type="text" placeholder="SERVICE"><br><br>
+<input name="locality" type="text" placeholder="LOCALITY"><br><br>
+<input name="city" type="text" placeholder="CITY"><br><br>
+<input name="email_id" type="email" placeholder= "EMAIL" ><br><br>
+<input name ="password1" type ="password" placeholder="Password"><br><br>
+<input name = "password2" type = "password" placeholder="Confirm Password"><br><br> 
+<button type="submit">Submit</button>
+</center>
+</form>
+</div>
+</body>
+</html>
